@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Unit teszt feladat</title>
+	<script type="text/javascript">
+	/* Ide jön  a feladat megoldása... */
+
+	/* 1. Feladat */
+
+	var szamok = new Array(10, 20, 3, 5, 100, 50, 60, 53);
+	var elemek = new Array();
+
+	function kivalogatParosOtven(szamok){
+		var paros50pdb = 0;
+
+        for(var i = 0; i < szamok.length; i++){
+			if((szamok[i] % 2 == 0) && (szamok[i] > 50)){
+				elemek[paros50pdb] = szamok[i];
+            /*	elemek.splice(paros50pdb, 1, szamok[i]);*/
+				paros50pdb++;
+			}
+		}
+		return  elemek;
+	}
+
+	/* 2. Feladat */
+
+	function aBetukSzamaDiv(){
+		var divszoveg = document.getElementsByTagName("div")[0].innerHTML;
+		var adb = 0;
+
+		for(var i = 0; i < divszoveg.length; i++){
+        	if(divszoveg[i] = 'a'){
+           	adb++;
+			}
+        }
+		return adb;
+	}
+
+	/* 3. Feladat */
+
+	function osszeadasFeliras(eredmeny, elsoOP, masodikOP){
+		Number(elsoOP);
+		Number(masodikOP);
+		var eredmeny = elsoOP + masodikOP;
+		
+		var mydiv = document.createElement("div");
+		document.getElementsByTagName("div").classList.add("eredmeny");
+		var myp = document.createElement("p");
+		var mypszoveg = document.createTextNode( elsoOP + masodikOP + eredmeny);
+		myp.appendChild(mypszoveg);
+		mydiv.appendChild(myp);
+
+		document.getElementsByClassName("eredmeny").innerHTML = ( elsoOP + masodikOP + eredmeny);
+	}
+
+	/* Idáig */
+	</script>
+	<script src="testBaseUnit.js"></script>
+</head>
+<body>
+    <div>agi21bvg8ibvgavgvt3zv8gfzavgzuv9gzuavgzu55vgz</div>
+	<hr>
+	<div id="testResult">
+	<h2>Tesztek</h2></div>
+</body>
+</html>
